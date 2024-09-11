@@ -22,6 +22,10 @@ if credentials_json:
     # Lanjutkan dengan konfigurasi Google Sheets
     # Misalnya:
     # client = gspread.authorize(creds)
+    spreadsheet_id = (
+        "1589Us7yAhYZH_AWTlKackgUkNtklbwYpPEeadscgXBM"  # Ganti dengan ID Spreadsheet
+    )
+    sheet = client.open_by_key(spreadsheet_id)
 else:
     raise ValueError("Environment variable 'CREDENTIALS' tidak ditemukan.")
     
