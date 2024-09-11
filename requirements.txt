@@ -1,0 +1,7 @@
+requests
+jsonschema
+gspread
+oauth2client
+pandas
+streamlit
+plotly
