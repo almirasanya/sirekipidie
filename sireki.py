@@ -6,7 +6,25 @@ from oauth2client.service_account import ServiceAccountCredentials
 import pandas as pd
 import streamlit as st
 import plotly.graph_objects as go
+import os
+from google.oauth2 import service_account
 
+# Ambil JSON dari environment variable
+credentials_json = os.getenv('GOOGLE_CREDENTIALS')
+
+if credentials_json:
+    # Parse JSON ke dictionary
+    credentials_info = json.loads(credentials_json)
+
+    # Buat credentials dari dictionary
+    creds = service_account.Credentials.from_service_account_info(credentials_info)
+
+    # Lanjutkan dengan konfigurasi Google Sheets
+    # Misalnya:
+    # client = gspread.authorize(creds)
+else:
+    raise ValueError("Environment variable 'GOOGLE_CREDENTIALS' tidak ditemukan.")
+    
 # Mengatur tema warna dan gaya
 st.markdown(
     """
