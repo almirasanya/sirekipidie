@@ -23,7 +23,7 @@ if credentials_json:
     # Misalnya:
     # client = gspread.authorize(creds)
 else:
-    raise ValueError("Environment variable 'GOOGLE_CREDENTIALS' tidak ditemukan.")
+    raise ValueError("Environment variable 'CREDENTIALS' tidak ditemukan.")
     
 # Mengatur tema warna dan gaya
 st.markdown(
