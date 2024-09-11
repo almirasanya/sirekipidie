@@ -10,7 +10,7 @@ import os
 from google.oauth2 import service_account
 
 # Ambil JSON dari environment variable
-credentials_json = os.getenv('GOOGLE_CREDENTIALS')
+credentials_json = os.getenv('CREDENTIALS')
 
 if credentials_json:
     # Parse JSON ke dictionary
